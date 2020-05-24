@@ -12,21 +12,8 @@ use pocketmine\event\block\BlockBreakEvent;
 use pocketmine\Player;
 
 
-class Main extends pluginBase implements Listener
-{
-    public function onEnable()
-    {
-        $this->getLogger()->notice("tokyoserverSystemsver.0.0.1の読み込み成功");
-        $this->getServer()->getPluginManager()->registerEvents($this,$this);
-    }
+class Main extends pluginBase implements Listener{public function onEnable(){$this->getLogger()->notice("tokyoserverSystemsver.0.0.1の読み込み成功");$this->getServer()->getPluginManager()->registerEvents($this,$this); }
 
 
 
-public function onJoin(PlayerJoinEvent $event)
- {
-     $event->getPlayer()->fry = false;
-    $name = $event->getPlayer()->getName();
-    $event->setJoinMessage("§a{$name}が参加しました。鯖生活を楽しんでいってね!");
- }
-
-}
+public function onJoin(PlayerJoinEvent $event){ $name = $event->getPlayer()->getName(); $event->setJoinMessage("§a{$name}が参加しました。鯖生活を楽しんでいってね!"); }}
